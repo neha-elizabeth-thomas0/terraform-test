@@ -8,18 +8,21 @@ terraform {
       source  = "hashicorp/local"
       version = "~> 2.4"
     }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.2"
+    }
   }
 }
 
 provider "random" {}
 provider "local" {}
+provider "null" {}
 
-# Generate random pet name
 resource "random_pet" "pet_name" {
   length = 2
 }
 
-# Create a local file using random name
 resource "local_file" "generated_file" {
   filename = "${var.file_prefix}-${random_pet.pet_name.id}.txt"
 
@@ -33,5 +36,4 @@ resource "null_resource" "test2" {
   provisioner "local-exec" {
     command = "echo 'Testing run task!'"
   }
-
 }
