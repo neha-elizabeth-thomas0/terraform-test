@@ -1,12 +1,4 @@
 terraform {
-  cloud { 
-    hostname = "tfcdev-440d497a.ngrok.app" 
-    organization = "hashicorp" 
-
-    workspaces { 
-      name = "learn-terraform-cli" 
-    } 
-  } 
   required_providers {
     random = {
       source  = "hashicorp/random"
