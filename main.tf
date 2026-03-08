@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.3.0"
   required_providers {
     random = {
       source  = "hashicorp/random"
@@ -14,10 +15,6 @@ terraform {
     }
   }
 }
-
-provider "random" {}
-provider "local" {}
-provider "null" {}
 
 resource "random_pet" "pet_name" {
   length = 2
