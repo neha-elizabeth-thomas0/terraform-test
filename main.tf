@@ -32,8 +32,4 @@ Custom Message: ${var.file_content}
 EOT
 }
 
-resource "null_resource" "test2" {
-  provisioner "local-exec" {
-    command = "echo 'Testing run task!'"
-  }
-}
+
