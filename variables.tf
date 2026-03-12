@@ -1,7 +1,7 @@
 variable "file_prefix" {
   description = "Prefix for the generated file"
   type        = string
-  default     = "demo"
+  default     = "sample"
 }
 
 variable "file_content" {
